@@ -10,5 +10,4 @@
 package swagger
 
 // Stores the exclusive ranges representing zones and the time spent in each.
-type TimedZoneDistribution struct {
-}
+type TimedZoneDistribution struct{}

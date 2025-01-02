@@ -1,0 +1,3 @@
+logger:
+  level: info
+  structured_logging: true

@@ -39,6 +39,11 @@ generate: ## generates strava go client from upstream swagger spec.
 	wget https://developers.strava.com/swagger/swagger.json -O $(STRAVA_API_SPEC_LOCATION)
 	swagger-codegen generate -i $(STRAVA_API_SPEC_LOCATION) -l go -o $(STRAVA_PKG_LOCATION)
 
+.PHONY: run
+run: ## runs application using go toolchain.
+	 CONFIG_BASE_FILE=./config/base.yaml CONFIG_OVERRIDE_FILES=./config/local.yaml CONFIG_ENVIRONMENT_PREFIX=APPLICATION go run internal/cmd/main.go
+
+
 .PHONY: tidy
 tidy: ## runs go mod tidy
 	go mod tidy

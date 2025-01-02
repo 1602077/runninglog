@@ -9,5 +9,4 @@
 
 package swagger
 
-type ZoneRanges struct {
-}
+type ZoneRanges struct{}
